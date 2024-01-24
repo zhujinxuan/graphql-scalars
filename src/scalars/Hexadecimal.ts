@@ -17,7 +17,7 @@ const validate = (value: any, ast?: ASTNode) => {
   return value;
 };
 
-export const GraphQLHexadecimalConfig: GraphQLScalarTypeConfig<string, string> = /*#__PURE__*/ {
+export const GraphQLHexadecimalConfig: GraphQLScalarTypeConfig<string, string> = /*#__NO_SIDE_EFFECTS__*/ {
   name: `Hexadecimal`,
 
   description: `A field whose value is a hexadecimal: https://en.wikipedia.org/wiki/Hexadecimal.`,
@@ -50,4 +50,4 @@ export const GraphQLHexadecimalConfig: GraphQLScalarTypeConfig<string, string> =
   },
 };
 
-export const GraphQLHexadecimal = /*#__PURE__*/ new GraphQLScalarType(GraphQLHexadecimalConfig);
+export const GraphQLHexadecimal = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLHexadecimalConfig);

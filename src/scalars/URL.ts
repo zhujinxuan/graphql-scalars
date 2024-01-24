@@ -1,7 +1,7 @@
 import { GraphQLScalarType, Kind } from 'graphql';
 import { createGraphQLError } from '../error.js';
 
-export const GraphQLURL = /*#__PURE__*/ new GraphQLScalarType({
+export const GraphQLURL = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType({
   name: 'URL',
 
   description:

@@ -4,7 +4,7 @@ import { ensureObject, parseObject } from './utils.js';
 
 const specifiedByURL = 'http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf';
 
-export const GraphQLJSONObjectConfig = /*#__PURE__*/ {
+export const GraphQLJSONObjectConfig = /*#__NO_SIDE_EFFECTS__*/ {
   name: 'JSONObject',
   description:
     'The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).',
@@ -22,4 +22,4 @@ export const GraphQLJSONObjectConfig = /*#__PURE__*/ {
   },
 } as GraphQLScalarTypeConfig<object, object>;
 
-export const GraphQLJSONObject = /*#__PURE__*/ new GraphQLScalarType(GraphQLJSONObjectConfig);
+export const GraphQLJSONObject = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLJSONObjectConfig);

@@ -85,4 +85,4 @@ const config: GraphQLScalarTypeConfig<Date, string> = {
   },
 };
 
-export const GraphQLTime = /*#__PURE__*/ new GraphQLScalarType(config);
+export const GraphQLTime = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(config);

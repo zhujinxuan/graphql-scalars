@@ -52,4 +52,4 @@ export const GraphQLLCCSubclassConfig = {
   },
 } as GraphQLScalarTypeConfig<string, string>;
 
-export const GraphQLLCCSubclass = /*#__PURE__*/ new GraphQLScalarType(GraphQLLCCSubclassConfig);
+export const GraphQLLCCSubclass = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLLCCSubclassConfig);

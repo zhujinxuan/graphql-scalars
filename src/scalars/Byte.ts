@@ -80,7 +80,7 @@ function parseObject(ast: ObjectValueNode) {
 }
 
 export const GraphQLByteConfig: GraphQLScalarTypeConfig<Buffer | string | BufferJson, Buffer> =
-  /*#__PURE__*/ {
+  /*#__NO_SIDE_EFFECTS__*/ {
     name: 'Byte',
     description: 'The `Byte` scalar type represents byte value as a Buffer',
     serialize: validate,
@@ -109,4 +109,4 @@ export const GraphQLByteConfig: GraphQLScalarTypeConfig<Buffer | string | Buffer
     },
   };
 
-export const GraphQLByte = /*#__PURE__*/ new GraphQLScalarType(GraphQLByteConfig);
+export const GraphQLByte = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLByteConfig);

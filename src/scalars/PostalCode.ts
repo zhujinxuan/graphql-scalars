@@ -36,26 +36,26 @@ import { createGraphQLError } from '../error.js';
 
 // prettier-ignore
 const POSTAL_CODE_REGEXES = [
-  /* US */ /*#__PURE__*//^\d{5}([-]?\d{4})?$/,
-  /* UK */ /*#__PURE__*//^(GIR|[A-Z]\d[A-Z\d]??|[A-Z]{2}\d[A-Z\d]??)[ ]??(\d[A-Z]{2})$/,
-  /* DE */ /*#__PURE__*//\b((?:0[1-46-9]\d{3})|(?:[1-357-9]\d{4})|(?:[4][0-24-9]\d{3})|(?:[6][013-9]\d{3}))\b/,
-  /* CA */ /*#__PURE__*//^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]) {0,1}(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$/,
-  /* FR */ /*#__PURE__*//^(F-)?((2[A|B])|[0-9]{2})[0-9]{3}$/,
-  /* IT */ /*#__PURE__*//^(V-|I-)?[0-9]{5}$/,
-  /* AU */ /*#__PURE__*//^(0[289][0-9]{2})|([1345689][0-9]{3})|(2[0-8][0-9]{2})|(290[0-9])|(291[0-4])|(7[0-4][0-9]{2})|(7[8-9][0-9]{2})$/,
-  /* NL */ /*#__PURE__*//^[1-9][0-9]{3}\s?([a-zA-Z]{2})?$/,
-  /* ES */ /*#__PURE__*//^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$/,
-  /* DK */ /*#__PURE__*//^([D|d][K|k]( |-))?[1-9]{1}[0-9]{3}$/,
-  /* SE */ /*#__PURE__*//^(s-|S-){0,1}[0-9]{3}\s?[0-9]{2}$/,
-  /* BE */ /*#__PURE__*//^[1-9]{1}[0-9]{3}$/,
-  /* IN */ /*#__PURE__*//^\d{6}$/,
-  /* AT */ /*#__PURE__*//^\d{4}$/,
-  /* PT */ /*#__PURE__*//^\d{4}([\-]\d{3})?$/,
-  /* CH */ /*#__PURE__*//^\d{4}$/,
-  /* LU */ /*#__PURE__*//^\d{4}$/,
-  /* IR */ /*#__PURE__*//^[1,3-9]{10}$/,
-  /* JP */ /*#__PURE__*//^\d{3}-\d{4}$/,
-  /* UA */ /*#__PURE__*//^\d{5}$/,
+  /* US */ /*#__NO_SIDE_EFFECTS__*//^\d{5}([-]?\d{4})?$/,
+  /* UK */ /*#__NO_SIDE_EFFECTS__*//^(GIR|[A-Z]\d[A-Z\d]??|[A-Z]{2}\d[A-Z\d]??)[ ]??(\d[A-Z]{2})$/,
+  /* DE */ /*#__NO_SIDE_EFFECTS__*//\b((?:0[1-46-9]\d{3})|(?:[1-357-9]\d{4})|(?:[4][0-24-9]\d{3})|(?:[6][013-9]\d{3}))\b/,
+  /* CA */ /*#__NO_SIDE_EFFECTS__*//^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]) {0,1}(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$/,
+  /* FR */ /*#__NO_SIDE_EFFECTS__*//^(F-)?((2[A|B])|[0-9]{2})[0-9]{3}$/,
+  /* IT */ /*#__NO_SIDE_EFFECTS__*//^(V-|I-)?[0-9]{5}$/,
+  /* AU */ /*#__NO_SIDE_EFFECTS__*//^(0[289][0-9]{2})|([1345689][0-9]{3})|(2[0-8][0-9]{2})|(290[0-9])|(291[0-4])|(7[0-4][0-9]{2})|(7[8-9][0-9]{2})$/,
+  /* NL */ /*#__NO_SIDE_EFFECTS__*//^[1-9][0-9]{3}\s?([a-zA-Z]{2})?$/,
+  /* ES */ /*#__NO_SIDE_EFFECTS__*//^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$/,
+  /* DK */ /*#__NO_SIDE_EFFECTS__*//^([D|d][K|k]( |-))?[1-9]{1}[0-9]{3}$/,
+  /* SE */ /*#__NO_SIDE_EFFECTS__*//^(s-|S-){0,1}[0-9]{3}\s?[0-9]{2}$/,
+  /* BE */ /*#__NO_SIDE_EFFECTS__*//^[1-9]{1}[0-9]{3}$/,
+  /* IN */ /*#__NO_SIDE_EFFECTS__*//^\d{6}$/,
+  /* AT */ /*#__NO_SIDE_EFFECTS__*//^\d{4}$/,
+  /* PT */ /*#__NO_SIDE_EFFECTS__*//^\d{4}([\-]\d{3})?$/,
+  /* CH */ /*#__NO_SIDE_EFFECTS__*//^\d{4}$/,
+  /* LU */ /*#__NO_SIDE_EFFECTS__*//^\d{4}$/,
+  /* IR */ /*#__NO_SIDE_EFFECTS__*//^[1,3-9]{10}$/,
+  /* JP */ /*#__NO_SIDE_EFFECTS__*//^\d{3}-\d{4}$/,
+  /* UA */ /*#__NO_SIDE_EFFECTS__*//^\d{5}$/,
 ];
 
 function _testPostalCode(postalCode: string) {
@@ -74,7 +74,7 @@ function _testPostalCode(postalCode: string) {
   return result;
 }
 
-export const GraphQLPostalCode = /*#__PURE__*/ new GraphQLScalarType({
+export const GraphQLPostalCode = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType({
   name: 'PostalCode',
 
   description:

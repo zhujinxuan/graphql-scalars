@@ -12,7 +12,7 @@ export type ISO8601Duration = string;
 const ISO_DURATION =
   /^(-|\+)?P(?!$)((-|\+)?\d+(?:(\.|,)\d+)?Y)?((-|\+)?\d+(?:(\.|,)\d+)?M)?((-|\+)?\d+(?:(\.|,)\d+)?W)?((-|\+)?\d+(?:(\.|,)\d+)?D)?(T(?=(-|\+)?\d)((-|\+)?\d+(?:(\.|,)\d+)?H)?((-|\+)?\d+(?:(\.|,)\d+)?M)?((-|\+)?\d+(?:(\.|,)\d+)?S)?)?$/;
 
-export const GraphQLDurationConfig: GraphQLScalarTypeConfig<string, string> = /*#__PURE__*/ {
+export const GraphQLDurationConfig: GraphQLScalarTypeConfig<string, string> = /*#__NO_SIDE_EFFECTS__*/ {
   name: 'Duration',
   description: `
     A string representing a duration conforming to the ISO8601 standard,
@@ -80,12 +80,12 @@ export const GraphQLDurationConfig: GraphQLScalarTypeConfig<string, string> = /*
   },
 };
 
-export const GraphQLISO8601Duration = /*#__PURE__*/ new GraphQLScalarType({
+export const GraphQLISO8601Duration = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType({
   ...GraphQLDurationConfig,
   name: 'ISO8601Duration',
 });
 
-export const GraphQLDuration = /*#__PURE__*/ new GraphQLScalarType({
+export const GraphQLDuration = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType({
   ...GraphQLDurationConfig,
   name: 'Duration',
 });

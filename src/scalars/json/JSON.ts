@@ -4,7 +4,7 @@ import { identity, parseLiteral } from './utils.js';
 
 const specifiedByURL = 'http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf';
 
-export const GraphQLJSONConfig = /*#__PURE__*/ {
+export const GraphQLJSONConfig = /*#__NO_SIDE_EFFECTS__*/ {
   name: 'JSON',
   description:
     'The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).',
@@ -18,4 +18,4 @@ export const GraphQLJSONConfig = /*#__PURE__*/ {
   },
 } as GraphQLScalarTypeConfig<any, any>;
 
-export const GraphQLJSON = /*#__PURE__*/ new GraphQLScalarType(GraphQLJSONConfig);
+export const GraphQLJSON = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLJSONConfig);

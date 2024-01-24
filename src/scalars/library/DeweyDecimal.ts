@@ -48,4 +48,4 @@ export const GraphQLDeweyDecimalConfig = {
   },
 } as GraphQLScalarTypeConfig<string, string>;
 
-export const GraphQLDeweyDecimal = /*#__PURE__*/ new GraphQLScalarType(GraphQLDeweyDecimalConfig);
+export const GraphQLDeweyDecimal = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLDeweyDecimalConfig);

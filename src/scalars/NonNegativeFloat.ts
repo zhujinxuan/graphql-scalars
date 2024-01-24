@@ -2,7 +2,7 @@ import { GraphQLScalarType, GraphQLScalarTypeConfig, Kind } from 'graphql';
 import { createGraphQLError } from '../error.js';
 import { processValue } from './utilities.js';
 
-export const GraphQLNonNegativeFloatConfig: GraphQLScalarTypeConfig<any, any> = /*#__PURE__*/ {
+export const GraphQLNonNegativeFloatConfig: GraphQLScalarTypeConfig<any, any> = /*#__NO_SIDE_EFFECTS__*/ {
   name: 'NonNegativeFloat',
 
   description: 'Floats that will have a value of 0 or more.',
@@ -35,6 +35,6 @@ export const GraphQLNonNegativeFloatConfig: GraphQLScalarTypeConfig<any, any> = 
   },
 };
 
-export const GraphQLNonNegativeFloat = /*#__PURE__*/ new GraphQLScalarType(
+export const GraphQLNonNegativeFloat = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(
   GraphQLNonNegativeFloatConfig,
 );

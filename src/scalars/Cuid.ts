@@ -31,7 +31,7 @@ const validate = (value: any, ast?: ValueNode) => {
 
 const specifiedByURL = 'https://github.com/ericelliott/cuid#broken-down';
 
-export const GraphQLCuidConfig = /*#__PURE__*/ {
+export const GraphQLCuidConfig = /*#__NO_SIDE_EFFECTS__*/ {
   name: 'Cuid',
 
   description:
@@ -63,4 +63,4 @@ export const GraphQLCuidConfig = /*#__PURE__*/ {
   },
 } as GraphQLScalarTypeConfig<string, string>;
 
-export const GraphQLCuid = /*#__PURE__*/ new GraphQLScalarType(GraphQLCuidConfig);
+export const GraphQLCuid = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLCuidConfig);

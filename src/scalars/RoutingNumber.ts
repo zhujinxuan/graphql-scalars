@@ -92,4 +92,4 @@ export const GraphQLRoutingNumberConfig: GraphQLScalarTypeConfig<string, string>
   },
 };
 
-export const GraphQLRoutingNumber = /*#__PURE__*/ new GraphQLScalarType(GraphQLRoutingNumberConfig);
+export const GraphQLRoutingNumber = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLRoutingNumberConfig);

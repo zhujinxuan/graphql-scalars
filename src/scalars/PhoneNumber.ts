@@ -3,7 +3,7 @@ import { createGraphQLError } from '../error.js';
 
 const PHONE_NUMBER_REGEX = /^\+[1-9]\d{6,14}$/;
 
-export const GraphQLPhoneNumber = /*#__PURE__*/ new GraphQLScalarType({
+export const GraphQLPhoneNumber = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType({
   name: 'PhoneNumber',
 
   description:

@@ -29,7 +29,7 @@ const validate = (value: any, ast?: ValueNode) => {
   return value;
 };
 
-export const GraphQLCountryCode = /*#__PURE__*/ new GraphQLScalarType({
+export const GraphQLCountryCode = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType({
   name: 'CountryCode',
   description: 'A country code as defined by ISO 3166-1 alpha-2',
   serialize(value) {

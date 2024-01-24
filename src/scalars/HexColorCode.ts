@@ -20,7 +20,7 @@ const validate = (value: any, ast?: ASTNode) => {
 
 const specifiedByURL = 'https://en.wikipedia.org/wiki/Web_colors';
 
-export const GraphQLHexColorCodeConfig = /*#__PURE__*/ {
+export const GraphQLHexColorCodeConfig = /*#__NO_SIDE_EFFECTS__*/ {
   name: `HexColorCode`,
 
   description: `A field whose value is a hex color code: https://en.wikipedia.org/wiki/Web_colors.`,
@@ -56,4 +56,4 @@ export const GraphQLHexColorCodeConfig = /*#__PURE__*/ {
   },
 } as GraphQLScalarTypeConfig<string, string>;
 
-export const GraphQLHexColorCode = /*#__PURE__*/ new GraphQLScalarType(GraphQLHexColorCodeConfig);
+export const GraphQLHexColorCode = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLHexColorCodeConfig);

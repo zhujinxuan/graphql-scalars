@@ -33,7 +33,7 @@ function generateCents(value: string) {
  *    currency strings.
  */
 
-export const GraphQLUSCurrency = /*#__PURE__*/ new GraphQLScalarType({
+export const GraphQLUSCurrency = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType({
   name: 'USCurrency',
   description: 'A currency string, such as $21.25',
   serialize: generateCurrency,

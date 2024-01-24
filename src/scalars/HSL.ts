@@ -22,7 +22,7 @@ const validate = (value: any, ast?: ASTNode) => {
 const specifiedByURL =
   'https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#hsl()_and_hsla()';
 
-export const GraphQLHSLConfig: GraphQLScalarTypeConfig<string, string> = /*#__PURE__*/ {
+export const GraphQLHSLConfig: GraphQLScalarTypeConfig<string, string> = /*#__NO_SIDE_EFFECTS__*/ {
   name: `HSL`,
 
   description: `A field whose value is a CSS HSL color: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#hsl()_and_hsla().`,
@@ -57,4 +57,4 @@ export const GraphQLHSLConfig: GraphQLScalarTypeConfig<string, string> = /*#__PU
   },
 } as GraphQLScalarTypeConfig<string, string>;
 
-export const GraphQLHSL = /*#__PURE__*/ new GraphQLScalarType(GraphQLHSLConfig);
+export const GraphQLHSL = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLHSLConfig);

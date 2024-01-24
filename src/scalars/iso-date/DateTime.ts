@@ -13,7 +13,7 @@ import { parseDateTime } from './formatter.js';
 // eslint-disable-line
 import { validateDateTime, validateJSDate } from './validator.js';
 
-export const GraphQLDateTimeConfig: GraphQLScalarTypeConfig<Date, Date> = /*#__PURE__*/ {
+export const GraphQLDateTimeConfig: GraphQLScalarTypeConfig<Date, Date> = /*#__NO_SIDE_EFFECTS__*/ {
   name: 'DateTime',
   description:
     'A date-time string at UTC, such as 2007-12-03T10:15:30Z, ' +
@@ -101,4 +101,4 @@ export const GraphQLDateTimeConfig: GraphQLScalarTypeConfig<Date, Date> = /*#__P
  *    RFC 3339 date-time strings and unix timestamps
  *    to RFC 3339 UTC date-time strings.
  */
-export const GraphQLDateTime = /*#__PURE__*/ new GraphQLScalarType(GraphQLDateTimeConfig);
+export const GraphQLDateTime = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLDateTimeConfig);

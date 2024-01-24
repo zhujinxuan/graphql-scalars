@@ -18,7 +18,7 @@ const validate = (value: any, ast?: ASTNode) => {
 
 const specifiedByURL = 'https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address';
 
-export const GraphQLEmailAddressConfig = /*#__PURE__*/ {
+export const GraphQLEmailAddressConfig = /*#__NO_SIDE_EFFECTS__*/ {
   name: 'EmailAddress',
 
   description:
@@ -50,4 +50,4 @@ export const GraphQLEmailAddressConfig = /*#__PURE__*/ {
   },
 } as GraphQLScalarTypeConfig<string, string>;
 
-export const GraphQLEmailAddress = /*#__PURE__*/ new GraphQLScalarType(GraphQLEmailAddressConfig);
+export const GraphQLEmailAddress = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLEmailAddressConfig);

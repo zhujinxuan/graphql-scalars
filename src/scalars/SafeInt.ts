@@ -71,4 +71,4 @@ export const GraphQLSafeIntConfig = {
   },
 } as GraphQLScalarTypeConfig<number | string, number>;
 
-export const GraphQLSafeInt = /*#__PURE__*/ new GraphQLScalarType(GraphQLSafeIntConfig);
+export const GraphQLSafeInt = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLSafeIntConfig);

@@ -21,7 +21,7 @@ const validate = (value: any, ast?: ASTNode) => {
 
 const specifiedByURL = 'https://en.wikipedia.org/wiki/ISO_4217';
 
-export const GraphQLCurrencyConfig = /*#__PURE__*/ {
+export const GraphQLCurrencyConfig = /*#__NO_SIDE_EFFECTS__*/ {
   name: `Currency`,
 
   description: `A field whose value is a Currency: https://en.wikipedia.org/wiki/ISO_4217.`,
@@ -56,4 +56,4 @@ export const GraphQLCurrencyConfig = /*#__PURE__*/ {
   },
 } as GraphQLScalarTypeConfig<string, string>;
 
-export const GraphQLCurrency = /*#__PURE__*/ new GraphQLScalarType(GraphQLCurrencyConfig);
+export const GraphQLCurrency = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLCurrencyConfig);

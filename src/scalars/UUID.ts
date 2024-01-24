@@ -23,7 +23,7 @@ const validate = (value: any, ast?: ASTNode) => {
   return value;
 };
 
-export const GraphQLUUIDConfig: GraphQLScalarTypeConfig<string, string> = /*#__PURE__*/ {
+export const GraphQLUUIDConfig: GraphQLScalarTypeConfig<string, string> = /*#__NO_SIDE_EFFECTS__*/ {
   name: `UUID`,
 
   description: `A field whose value is a generic Universally Unique Identifier: https://en.wikipedia.org/wiki/Universally_unique_identifier.`,
@@ -54,4 +54,4 @@ export const GraphQLUUIDConfig: GraphQLScalarTypeConfig<string, string> = /*#__P
   },
 };
 
-export const GraphQLUUID = /*#__PURE__*/ new GraphQLScalarType(GraphQLUUIDConfig);
+export const GraphQLUUID = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLUUIDConfig);

@@ -1,8 +1,8 @@
 import { GraphQLScalarType } from 'graphql';
 import { GraphQLBigIntConfig } from './BigInt.js';
 
-export const GraphQLLongConfig = /*#__PURE__*/ Object.assign({}, GraphQLBigIntConfig, {
+export const GraphQLLongConfig = /*#__NO_SIDE_EFFECTS__*/ Object.assign({}, GraphQLBigIntConfig, {
   name: 'Long',
 });
 
-export const GraphQLLong = /*#__PURE__*/ new GraphQLScalarType(GraphQLLongConfig);
+export const GraphQLLong = /*#__NO_SIDE_EFFECTS__*/ new GraphQLScalarType(GraphQLLongConfig);
